@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.head{
+  background-color:rgb(37, 37, 37);
+  height: 60px;
+  width: 100%;
+}
+
+div.navLinks a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: right;
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+  display:inline-block;
+}  
+
+div.container{
+  display:inline-block;
+  margin-top: 70px;
+  margin-left: 120px;
+  padding: 20px;
+  height: auto;
+  width: 40%;
+}
+
+div.container h1.hello{
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+}
+
+div.container p.welcome{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div.container2{
+  display:inline-block;
+  margin-left: 120px;
+  padding-top: 0px;
+  padding-left:20px;
+  height: auto;
+  width: 40%;
+}
+
+div.container2 p.description{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+  
+  div.image {
+    float:right;
+    margin-top: -440px;
+    margin-left: 1000px;
+    margin-right: 140px;
+    height: 450px;
+    width: 450px;
+
+    img.portfolioImage{
+      border-radius: 500px;
+      height: 350px;
+      width: 350px;
+    }
+  }
+div.folder{
+background-color: none;
+}
+
+div.folder p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: right;
+  margin: 20px;
+  text-decoration: none;
+  display:inline-block
+}
