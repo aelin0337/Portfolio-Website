@@ -5,7 +5,7 @@ body{
 
 div.head{
   background-color:rgb(37, 37, 37);
-  height: 60px;
+  height: 10%;
   width: 100%;
 }
 
@@ -18,67 +18,63 @@ div.navLinks a {
   color: white;
   display:inline-block;
 }  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
-div.container{
-  display:inline-block;
-  margin-top: 70px;
-  margin-left: 120px;
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.text-container {
+  max-width: 500px;
   padding: 20px;
-  height: auto;
-  width: 40%;
 }
 
-div.container h1.hello{
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
+.hello {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-div.container p.welcome{
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  margin-top: 20px;
+.name {
+  color: #007acc;
+}
+
+.welcome {
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
-div.container2{
-  display:inline-block;
-  margin-left: 120px;
-  padding-top: 0px;
-  padding-left:20px;
-  height: auto;
-  width: 40%;
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-div.container2 p.description{
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-  
-  div.image {
-    float:right;
-    margin-top: -440px;
-    margin-left: 1000px;
-    margin-right: 140px;
-    height: 450px;
-    width: 450px;
-
-    img.portfolioImage{
-      border-radius: 500px;
-      height: 350px;
-      width: 350px;
-    }
-  }
-div.folder{
-background-color: none;
+.image-container {
+  text-align: center;
 }
 
-div.folder p{
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+.portfolio-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.footer {
   text-align: right;
-  margin: 20px;
-  text-decoration: none;
-  display:inline-block
+  padding: 20px 40px;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
 }
