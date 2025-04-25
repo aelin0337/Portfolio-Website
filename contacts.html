@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main-jquery.js"></script>
+    <script src="main.js"></script>
 
     <title>Contacts</title>
 </head>
@@ -40,13 +41,14 @@
           <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jessi" target="_blank">linkedin.com/in/jessi</a></p>
         </div>
       
-        <form class="contact_form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-      
+        <div id="contactFormWrapper" class="contact-form mt-4">
+          <form>
+            <input type="text" class="form-control my-2" placeholder="Your Name" required>
+            <input type="email" class="form-control my-2" placeholder="Your Email" required>
+            <textarea class="form-control my-2" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary w-100 mt-2">Send Message</button>
+          </form>
+        </div>
+      </section> 
 </body>
 </html>

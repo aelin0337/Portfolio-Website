@@ -83,7 +83,7 @@
 
   <section class="container my-5">
     <h2 class="mb4">What Clients Say</h2>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
       <div class ="carousel-inner mt-4">
 
         <div class ="carousel-item active">
@@ -119,31 +119,5 @@
     </div>
   </div>
 </section>
-
-
-    <script>
-      $(document).ready(function () {
-      $('.service-card').on('click', function () {
-        let title = $(this).data('title');
-        let description = $(this).data('description');
-        let price = $(this).data('price');
-
-        $('#modalTitle').text(title);
-        $('#modalDescription').text(description);
-        $('#modalPrice').text(price);
-        $('#serviceModal').fadeIn();
-      });
-
-      $('.modal-close').on('click', function () {
-        $('#serviceModal').fadeOut();
-      });
-
-      $(window).on('click', function (e) {
-        if ($(e.target).is('#serviceModal')) {
-          $('#serviceModal').fadeOut();
-        }
-      });
-    });
-    </script>
 </body>
 </html>

@@ -16,25 +16,36 @@ $(document).ready(function () {
       }
     });
   });
-  $("#toggleBox").click(function () {
-    $(".hiddenContent").slideToggle();
+
+  $(document).ready(function(){
+    $("#show").click(function(){
+      $("p, footer").show();
+    });
+    $("#hide").click(function(){
+      $("p, footer").hide();
+    });
+    
   });
-  $("#updateText").text("Text updated with jQuery!");
 
+  $(document).ready(function () {
+    $('.service-card').on('click', function () {
+      let title = $(this).data('title');
+      let description = $(this).data('description');
+      let price = $(this).data('price');
 
+      $('#modalTitle').text(title);
+      $('#modalDescription').text(description);
+      $('#modalPrice').text(price);
+      $('#serviceModal').fadeIn();
+    });
 
-//4 part
-$("#changeStyle").css("color", "purple");
+    $('.modal-close').on('click', function () {
+      $('#serviceModal').fadeOut();
+    });
 
-$("#toggleBox").click(function () {
-  $(".hiddenContent").slideToggle();
-});
-
-$("#updateText").text("Text updated with jQuery!");
-
-$("#addItem").click(function () {
-  $("#dynamicList").append("<li>New Item</li>");
-});
-$("#removeItem").click(function () {
-  $("#dynamicList li:last").remove();
-});
+    $(window).on('click', function (e) {
+      if ($(e.target).is('#serviceModal')) {
+        $('#serviceModal').fadeOut();
+      }
+    });
+  });
