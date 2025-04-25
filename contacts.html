@@ -8,21 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main-jquery.js"></script>
+
     <title>Contacts</title>
 </head>
 <body>
-    <div class = "head">
-        <nav>
-             <div class = "navLinks" align="right">
-                 <a href = "index.html">Home</a>
-                 <a href = "aboutMe.html">About Me</a>
-                 <a href = "projects.html">Projects</a>
-                 <a href = "services.html">Services</a>
-                 <a href = "contacts.html">Contacts</a>
-            </div>
-        </nav>
+  <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class = container>
+      <a class = "navbar-brand" href="index.html">Jessi Lee</a>
+      <button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class = "navbar-toggler-icon"></span>
+      </button>
+      <div class = "collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class = "navbar-nav">
+          <li class = "nav-item"><a class = "nav-link" href="aboutMe.html">About</a></li>
+          <li class = "nav-item"><a class = "nav-link" href="projects.html">Projects</a></li>
+          <li class = "nav-item"><a class = "nav-link" href="services.html">Services</a></li>
+          <li class = "nav-item"><a class = "nav-link" href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
     <section class="contact">
         <h1>Contact Me</h1>
         <p>If you'd like to get in touch, feel free to send a message or reach out via the platforms below.</p>

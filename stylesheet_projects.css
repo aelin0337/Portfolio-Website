@@ -59,54 +59,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: whitesmoke;
 }
-
-.head {
-  background-color: #252525;
-  padding: 20px 0;
-  width: 100%;
+.text-muted{
+  padding: 5%;
 }
-.navLinks a {
-  font-size: 15px;
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-}
-.navLinks a:hover {
-  text-decoration: underline;
-}
-.projects h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-.projects_card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-.projects_card:hover {
-  transform: scale(1.02);
-}
-.projects_card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.project_info {
-  padding: 20px;
-}
-.project_info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-.project_info a {
-  color: #0d6efd;
-  text-decoration: none;
-}
-.project_info a:hover {
-  text-decoration: underline;
-}
-

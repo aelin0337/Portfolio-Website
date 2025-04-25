@@ -8,57 +8,96 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main-jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
     <title>About Me</title>
 </head>
 <body>
-    <div class = "head1">
-        <nav>
-             <div class = "navLinks1" align="right">
-                 <a href = "index.html">Home</a>
-                 <a href = "aboutMe.html">About Me</a>
-                 <a href = "projects.html">Projects</a>
-                 <a href = "services.html">Services</a>
-                 <a href = "contacts.html">Contacts</a>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class = container>
+          <a class = "navbar-brand" href="index.html">Jessi Lee</a>
+          <button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+          <div class = "collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class = "navbar-nav">
+              <li class = "nav-item"><a class = "nav-link" href="aboutMe.html">About</a></li>
+              <li class = "nav-item"><a class = "nav-link" href="projects.html">Projects</a></li>
+              <li class = "nav-item"><a class = "nav-link" href="services.html">Services</a></li>
+              <li class = "nav-item"><a class = "nav-link" href="contacts.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="container my-5">
+        <h2>About Me</h2>
+        <p>Hello! I'm Jessi Lee, a passionate frontend developer.</p>
+      
+        <h4>🎓 Education & Certifications</h4>
+        <ul>
+          <li>Bachelor in Computer Science, XYZ University</li>
+          <li>Frontend Development Certificate – Coursera</li>
+        </ul>
+      
+        <h4>💼 Skills & Experience</h4>
+        <ul>
+          <li>HTML, CSS, JavaScript, React</li>
+          <li>Bootstrap, Figma, GitHub</li>
+          <li>3+ years of freelance experience</li>
+        </ul>
+
+        <section class="container my-5">
+          <h2 class="mb4">What Clients Say</h2>
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class ="carousel-inner mt-4">
+      
+              <div class ="carousel-item active">
+                <div class="p-4 bg-light rounded shadow-sm">
+                  <div class="mb-2 text-warning fs-4">
+                    ★★★★★
+                  </div>
+                  <p class="fst-italic">"Jessi transformed our outdated site into a sleek, modern platform. Couldn't be happier!"</p>
+                  <p class="fw-bold mb-0">— Samantha Green, Boutique Owner</p>
+                </div>
+              </div>
+      
+              <div class="carousel-item">
+                <div class="p-4 bg-light rounded shadow-sm">
+                  <div class="mb-2 text-warning fs-4">
+                    ★★★★☆
+                  </div>
+                  <p class="fst-italic">"Incredible attention to detail! Our frontend now works flawlessly on all devices."</p>
+                  <p class="fw-bold mb-0">— Mark Rivera, Tech Startup CEO</p>
+                </div>
+              </div>
+        
+              <div class="carousel-item">
+                <div class="p-4 bg-light rounded shadow-sm">
+                  <div class="mb-2 text-warning fs-4">
+                    ★★★★★
+                  </div>
+                  <p class="fst-italic">"Site speed and SEO improved drastically. Great communication throughout."</p>
+                  <p class="fw-bold mb-0">— Linda Perez, Freelance Writer</p>
+                </div>
+              </div>
             </div>
-        </nav>
-
-<div class = 'background'>
-
-<div class = 'centerBlock'>
-    <h1 align = "center">About me</h1>
-<div class = 'biography'>
-    <p>Hello! i'm Jessi, a passionate frontend developer with a background in computer science and experience in creating user-friendly websites.</p>
-</div>
-
-<div class = 'skills'>
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Responsive Design</li>
-    </ul>
-</div>
-
-<div class = 'education'>
-    <h2>Education & Certifications</h2>
-    <p>B.S. in Computer Science, University of Somewhere</p>
-</div>
-
-<div class = 'skills'>
-    <h2>Skills</h2>
-    <p>Proficient in HTML, CSS, JavaScript, and React wih 5+ years of experience in building responsive and interactive web applications</p>
-</div>
-
-<div class = 'testimonials'>
-    <h2>Testimonials</h2>
-    <p>"Jessi is a talented developer who consistently delivers high-quality work." - Client A</p>
-    <p>"Her attention to detail and problem-solving skills are impressive." - Client B</p>
-    <p>"Jessi's creativity and technical skills make her a valuable asset to any team." - Client C</p>
-</div>
-</div>
-</div>
-
+        </div>
+      </section>
+        <script>
+        $(document).ready(function(){
+          $("#show").click(function(){
+            $("p, footer").show();
+          });
+          $("#hide").click(function(){
+            $("p, footer").hide();
+          });
+          
+        });
+        </script>
+      </main>
 </body>
 </html>

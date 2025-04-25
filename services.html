@@ -8,44 +8,142 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main-jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     
     <title>services</title>
 </head>
 <body>
-    <div class = "head">
-        <nav>
-             <div class = "navLinks" align="right">
-                <a href = "index.html">Home</a>
-                 <a href = "aboutMe.html">About Me</a>
-                 <a href = "projects.html">Projects</a>
-                 <a href = "services.html">Services</a>
-                 <a href = "contacts.html">Contacts</a>
-            </div>
-        </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Jessi Lee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="aboutMe.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>   
 
-    <main class="container my-5">
-      <h2>Services</h2>
-      <div class="row">
-        <div class="col-md-4">
+  <main class="container my-5">
+    <h2>Services</h2>
+    <div class="row row-cols-1 row-cols-md-3 gx-5 gy-3 mt-2">
+        
+      <div class="col">
+        <div class="p-4 bg-light rounded shadow-sm service-card"
+             data-title="Web Design"
+             data-description="Modern and user-friendly layouts tailored to your brand."
+             data-price="From $150">
           <h5>Web Design</h5>
           <p>Modern and user-friendly layouts tailored to your brand.</p>
           <p><strong>From $150</strong></p>
         </div>
-    
-        <div class="col-md-4">
+      </div>
+
+      <div class="col">
+        <div class="p-4 bg-light rounded shadow-sm service-card"
+             data-title="Frontend Development"
+             data-description="Pixel-perfect HTML/CSS/JS development, responsive across all devices."
+             data-price="From $250">
           <h5>Frontend Development</h5>
           <p>Pixel-perfect HTML/CSS/JS development, responsive across all devices.</p>
           <p><strong>From $250</strong></p>
         </div>
-    
-        <div class="col-md-4">
+      </div>
+
+      <div class="col">
+        <div class="p-4 bg-light rounded shadow-sm service-card"
+             data-title="Site Optimization"
+             data-description="Improve speed, accessibility and SEO for your site."
+             data-price="From $100">
           <h5>Site Optimization</h5>
           <p>Improve speed, accessibility and SEO for your site.</p>
           <p><strong>From $100</strong></p>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
+  <div id="serviceModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h4 id="modalTitle"></h4>
+      <p id="modalDescription"></p>
+      <p id="modalPrice" class="fw-bold"></p>
+    </div>
+  </div>
+
+  <section class="container my-5">
+    <h2 class="mb4">What Clients Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class ="carousel-inner mt-4">
+
+        <div class ="carousel-item active">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <div class="mb-2 text-warning fs-4">
+              ★★★★★
+            </div>
+            <p class="fst-italic">"Jessi transformed our outdated site into a sleek, modern platform. Couldn't be happier!"</p>
+            <p class="fw-bold mb-0">— Samantha Green, Boutique Owner</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <div class="mb-2 text-warning fs-4">
+              ★★★★☆
+            </div>
+            <p class="fst-italic">"Incredible attention to detail! Our frontend now works flawlessly on all devices."</p>
+            <p class="fw-bold mb-0">— Mark Rivera, Tech Startup CEO</p>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <div class="mb-2 text-warning fs-4">
+              ★★★★★
+            </div>
+            <p class="fst-italic">"Site speed and SEO improved drastically. Great communication throughout."</p>
+            <p class="fw-bold mb-0">— Linda Perez, Freelance Writer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <script>
+      $(document).ready(function () {
+      $('.service-card').on('click', function () {
+        let title = $(this).data('title');
+        let description = $(this).data('description');
+        let price = $(this).data('price');
+
+        $('#modalTitle').text(title);
+        $('#modalDescription').text(description);
+        $('#modalPrice').text(price);
+        $('#serviceModal').fadeIn();
+      });
+
+      $('.modal-close').on('click', function () {
+        $('#serviceModal').fadeOut();
+      });
+
+      $(window).on('click', function (e) {
+        if ($(e.target).is('#serviceModal')) {
+          $('#serviceModal').fadeOut();
+        }
+      });
+    });
+    </script>
 </body>
 </html>

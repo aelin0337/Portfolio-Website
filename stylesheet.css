@@ -9,6 +9,14 @@ div.head{
   width: 100%;
 }
 
+button {
+  background-color: #a3a6a7;
+  margin: 10px, 10px, 50%, 50%;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 div.navLinks a {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -72,6 +80,9 @@ body {
 }
 
 .footer {
+  margin-bottom: none;
+  width: 100%;
+  position: fixed;
   text-align: right;
   padding: 20px 40px;
   background-color: #222;
