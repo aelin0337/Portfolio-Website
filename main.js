@@ -1,7 +1,3 @@
-window.onload = function(){
-alert('Welcome to my website portfolio')
-};
-
 function getShortInfo() {
   const name = "Jessi";
   const age = 23;
