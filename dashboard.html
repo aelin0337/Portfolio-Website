@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(localStorage.getItem("isAdmin") !== "true") {
+            window.location.href = "admin45.html";
+        }
+    </script>
+
+    <h2>Редактировать контактную информацию</h2>
+    <textarea id="info-input" rows="4" cols="50" placeholder="Введите новый контактный текст..."></textarea><br>
+    <button onclick="saveInfo()">Сохранить</button>
+
+<script>
+  function saveInfo() {
+    const newText = document.getElementById('info-input').value;
+    localStorage.setItem('info', newText);
+    alert('Контактная информация обновлена!');
+  }
+</script>
+</body>
+</html>

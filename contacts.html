@@ -33,8 +33,16 @@
   </nav>
     <section class="contact">
         <h1>Contact Me</h1>
-        <p>If you'd like to get in touch, feel free to send a message or reach out via the platforms below.</p>
+        <p id="info">If you'd like to get in touch, feel free to send a message or reach out via the platforms below.</p>
       
+        <script>
+          document.addEventListener("DOMContentLoaded", function(){
+            const saveInfo = localStorage.getItem("info");
+            if (saveInfo) {
+              document.getElementById("info").innerText = saveInfo;
+            }
+          });
+        </script>
         <div class="contact_info">
           <p><strong>Email:</strong> jessilee@gmail.com</p>
           <p><strong>GitHub:</strong> <a href="https://github.com/jessi" target="_blank">github.com/jessi</a></p>
@@ -43,12 +51,18 @@
       
         <div id="contactFormWrapper" class="contact-form mt-4">
           <form action="https://getform.io/f/akkyqzoa" method="POST">
-            <input type="text" name="name" class="form-control my-2" placeholder="Your Name" required>
-            <input type="email" name="email" class="form-control my-2" placeholder="Your Email" required>
-            <textarea name="message" class="form-control my-2" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary w-100 mt-2">Send Message</button>
+            <input type="text" id="userName" name="name" class="form-control my-2" placeholder="Your Name" required>
+            <input type="email" id="userEmail" name="email" class="form-control my-2" placeholder="Your Email" required>
+            <textarea name="message" id="userMessage" class="form-control my-2" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary w-100 mt-2" onclick="saveFormData()">Send Message</button>
           </form>
         </div>
+
+        
+        <div id="time-widget" class="time-widget mt-4">
+          <span id="current-time" class="loading">Определение времени...</span>
+        </div>
+
       </section> 
 </body>
 </html>

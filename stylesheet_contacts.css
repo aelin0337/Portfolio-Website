@@ -84,3 +84,17 @@ div.navLinks a {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   transition: all 0.3s ease-in-out;
 }
+
+#time-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+.loading {
+  color: #ccc;
+}

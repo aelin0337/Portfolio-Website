@@ -1,3 +1,4 @@
+// anomation of the card
 $(document).ready(function () {
     $('.toggle-details').click(function () {
       const clickedButton = $(this);
@@ -17,6 +18,7 @@ $(document).ready(function () {
     });
   });
 
+ // show and hide the text
   $(document).ready(function(){
     $("#show").click(function(){
       $("p, footer").show();
@@ -24,11 +26,18 @@ $(document).ready(function () {
     $("#hide").click(function(){
       $("p, footer").hide();
     });
-    
+
   });
 
+  // show a cards with audio
   $(document).ready(function () {
+
+    const clickSound = new Audio('click.mp3');
+
     $('.service-card').on('click', function () {
+      clickSound.currentTime = 0;
+      clickSound.play();
+      
       let title = $(this).data('title');
       let description = $(this).data('description');
       let price = $(this).data('price');

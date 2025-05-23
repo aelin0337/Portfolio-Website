@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление навыками</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        textarea { width: 100%; height: 200px; margin: 10px 0; }
+        button { padding: 8px 16px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Управление навыками</h1>
+    
+    <div id="loginSection" style="display: block;">
+        <h3>Введите код доступа:</h3>
+        <input type="password" id="adminCode" placeholder="Введите код">
+        <button onclick="checkAdminCode()">Войти</button>
+    </div>
+
+    <div id="skillsEditor" style="display: none;">
+        <h3>Список навыков (каждый с новой строки):</h3>
+        <textarea id="skillsTextarea"></textarea>
+        <button onclick="saveSkills()">Сохранить</button>
+        <p id="statusMessage"></p>
+    </div>
+
+    <script src="admin-skills.js"></script>
+</body>
+</html>
